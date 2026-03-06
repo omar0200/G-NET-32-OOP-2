@@ -21,6 +21,10 @@
 
 
             #region Question 3
+            //a) this[] is an indexer which makes object accessed by array syntax
+            //b) it will raise excepetion because array has 5 elements only from 0 to 4 and 10 is out of boundaries 
+            // i can do a validation of index of array to be less than size of array
+            //c) yes class could have more than indexer but with diffrent parameter to avoid parameter overload 
             #endregion
 
         }
