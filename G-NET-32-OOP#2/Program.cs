@@ -27,6 +27,14 @@
             //c) yes class could have more than indexer but with diffrent parameter to avoid parameter overload 
             #endregion
 
+
+            #region Question 4
+            //a) static makes it variable to be for the class not for instance of class that means everytime order object is instatiated total order 
+            //isnot count from 0 , item field is instance variable "item" for obj 1 is diff of obj 2 
+            //b) No, a static method cannot access the Item field directly.
+
+            #endregion
+
         }
     }
 }
