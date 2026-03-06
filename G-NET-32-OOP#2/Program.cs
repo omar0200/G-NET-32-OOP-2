@@ -1,5 +1,6 @@
 ﻿namespace G_NET_32_OOP_2
 {
+    public enum TicketType { Standard, VIP, IMAX }
     internal class Program
     {
         static void Main(string[] args)
@@ -34,6 +35,36 @@
             //b) No, a static method cannot access the Item field directly.
 
             #endregion
+
+            #region Question 5
+            Cinema c = new Cinema();
+            Console.WriteLine("Enter Data for 3 Tickets");
+            for (int i = 1; i < 4; i++) {
+              
+                string Moviename;
+                Console.WriteLine($"Enter data for Ticket {i}");
+                Console.WriteLine("Movie Name: ");
+               Moviename= Console.ReadLine();
+                Console.WriteLine("Ticket Type (0=Standard, 1=VIP, 2=IMAX): ");
+                int choice = Convert.ToInt32( Console.ReadLine());
+                Console.WriteLine("Seat Row (A-Z): ");
+               char seatrow= Convert.ToChar(Console.ReadLine());
+                Console.WriteLine("Seat Number: ");
+              int seatnumber=  Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Price: ");
+             double price=   Convert.ToDouble(Console.ReadLine());
+                TicketType type = (TicketType)choice;
+                c[i] = new Ticket(Moviename, type, new Seat(seatrow, seatnumber), price);
+
+            }
+            for (int i = 1; i < 4; i++)
+            {
+                Console.WriteLine(c[i]);
+            }
+            #endregion
+
+            #region Searchwithmove
+
 
         }
     }
