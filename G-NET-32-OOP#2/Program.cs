@@ -39,10 +39,10 @@
             #region Question 5
             Cinema c = new Cinema();
             Console.WriteLine("Enter Data for 3 Tickets");
-            for (int i = 1; i < 4; i++) {
+            for (int i = 0; i < 3; i++) {
               
                 string Moviename;
-                Console.WriteLine($"Enter data for Ticket {i}");
+                Console.WriteLine($"Enter data for Ticket {i+1}");
                 Console.WriteLine("Movie Name: ");
                Moviename= Console.ReadLine();
                 Console.WriteLine("Ticket Type (0=Standard, 1=VIP, 2=IMAX): ");
@@ -57,14 +57,33 @@
                 c[i] = new Ticket(Moviename, type, new Seat(seatrow, seatnumber), price);
 
             }
-            for (int i = 1; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine(c[i]);
             }
+         
+
+           
+            Console.WriteLine("Enter movie name to search:");
+           
+            string MovieSearch = Console.ReadLine();
+
+            Ticket result = c[MovieSearch];
+           
+            Console.WriteLine(result);
+
+            int total = Ticket.GetTotalTicketsSold();
+            Console.WriteLine($"Total sold tickets is {total}");
+
+            string booking_ref1 = BookingHelper.GenerateBookingReference();
+            string booking_ref2 = BookingHelper.GenerateBookingReference();
+            Console.WriteLine(booking_ref2,booking_ref1);
+
+            double bookingresult = BookingHelper.CalcGroupDiscount(5, 80);
+            Console.WriteLine(bookingresult);
+
+
             #endregion
-
-            #region Searchwithmove
-
 
         }
     }

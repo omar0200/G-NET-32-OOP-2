@@ -30,14 +30,17 @@ namespace G_NET_32_OOP_2
 
         }
 
-        public Ticket this[string MoiveName] { 
-            get {
+        public Ticket this[string movieName]
+        {
+            get
+            {
                 foreach (var ticket in _ticket)
                 {
-                    if (ticket.MovieName == MoiveName) return ticket;
+                    if (ticket != null && ticket.MovieName == movieName)
+                        return ticket;
                 }
                 return null;
-            } 
+            }
         }
         public Ticket AddTicket(Ticket t)
         {
