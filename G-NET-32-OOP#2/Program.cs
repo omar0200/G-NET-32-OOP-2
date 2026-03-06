@@ -14,6 +14,15 @@
 
             #endregion
 
+            #region Question 2 
+            //field is direct data storage which  has no validation and breaks encapsulation when it public
+            //meanwhile property enforce encapsulation and  could be validated 
+            #endregion
+
+
+            #region Question 3
+            #endregion
+
         }
     }
 }
